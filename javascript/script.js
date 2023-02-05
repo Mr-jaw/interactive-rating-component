@@ -1,9 +1,7 @@
 let rating = "0";
 
-console.log("hi");
 
 function init() {
-  console.log("hi");
   document
     .querySelector(".ratings")
     .addEventListener("click", function (event) {

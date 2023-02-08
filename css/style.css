@@ -1,3 +1,4 @@
+/* setting custom CSS properties */
 :root {
   --orange: hsl(25, 97%, 53%);
   --white: hsl(0, 0%, 100%);
@@ -124,12 +125,12 @@ main {
 }
 
 .rating-state .ratings .ratings-btn:hover {
-  background-color: var(--medium-grey);
+  background-color: var(--orange);
   color: var(--white);
 }
 
 .rating-state .ratings .ratings-btn:focus {
-  background-color: var(--orange);
+  background-color: var(--medium-grey);
   color: white;
 }
 
@@ -144,6 +145,7 @@ main {
 .thankyou-state {
   text-align: center;
   padding: 2.7em 2.3em;
+  
 }
 
 .rating-feedback {
@@ -178,6 +180,27 @@ main {
   color: var(--orange);
 }
 
+@keyframes fade {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-200%);
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: translateY(200%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* media queries for responsive web layout */
 @media (max-width: 25em) {
   main {
     min-width: 22.2em;

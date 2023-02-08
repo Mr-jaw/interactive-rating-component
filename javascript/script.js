@@ -15,11 +15,16 @@ function init() {
 }
 
 function submit() {
-  let rating_state = document.querySelector(".rating-state");
-  let thankyou_state = document.querySelector(".thankyou-state");
-
-  rating_state.classList.add("hidden");
-  thankyou_state.classList.remove("hidden");
+  if (rating !== "0") {
+    let rating_state = document.querySelector(".rating-state");
+    let thankyou_state = document.querySelector(".thankyou-state");
+    
+    rating_state.classList.add("hidden");
+    thankyou_state.classList.remove("hidden");
+  } else {
+    alert("Please Select a rating between 1 and 5")
+  }
+  
 }
 
 init();
